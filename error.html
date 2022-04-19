@@ -1,21 +1,28 @@
-<roundcube:include file="includes/layout.html" />
-
-<roundcube:if condition="!env:framed && !env:extwin" />
-	<roundcube:include file="includes/menu.html" />
-	<div id="layout-content" class="selected" role="main">
-		<div class="header">
-			<a class="button icon task-menu-button" href="#menu"><span class="inner"><roundcube:label name="menu" /></span></a>
-			<span class="header-title"></span>
-		</div>
-		<div class="frame-content scroller">
-<roundcube:else />
-	<div id="layout-content" class="selected" role="main">
-		<div class="frame-content scroller">
-<roundcube:endif />
-
-$__page_content
-
-		</div>
-	</div>
-
-<roundcube:include file="includes/footer.html" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Internal Error</title>
+<style>
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+}
+p.admin {
+  font-style: italic;
+  font-size: 0.8em;
+  color: #888;
+}
+</style>
+</head>
+<body>
+<div>
+  <h1>Oops... something went wrong!</h1>
+  <p>An internal error has occurred. Your request cannot be processed at this time.</p>
+  <p class="admin">For administrators: Please check the application and/or server error logs for more information.</p>
+</div>
+</body>
+</html>
